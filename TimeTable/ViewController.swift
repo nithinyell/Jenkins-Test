@@ -26,6 +26,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         pickerView2.selectRow(4, inComponent: 0, animated: false)
         labelResult.text = "16"
         timeTable = TimeTable()
+        
+        let sum:Int =  add(firstInt: 2, secondInt: 3)
+        print(sum)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +53,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let val2 = pickerView2.selectedRow(inComponent: 0)
         
         labelResult.text = "\(timeTable.multiply(val1, b: val2))"
+    }
+    
+    func add(firstInt:Int, secondInt:Int) -> Int {
+        return firstInt+secondInt
     }
     
 }
